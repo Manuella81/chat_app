@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+**CHAT_APP** (en cours de réalisation)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue sur le projet CHAT_APP. Il s'agit d'une application fictif de conversation.
+Utilisation de react.js en front et de firebase pour le back et cloud firestore pour la création de la base de données.
+Firebase est utilisé pour la gestion en temps réel des messages, l'authentification des utilisateurs, le stockage de fichiers et l'analyse des données utilisateur.
 
-## Available Scripts
 
-In the project directory, you can run:
+**EXPLICATION DU CODE**
 
-### `npm start`
+**firebase-config**: permet d'initialiser Firebase dans mon application web, d'accéder à Cloud Firestore pour stocker des données, et d'utiliser le service d'authentification Firebase pour gérer l'authentification des utilisateurs, en utilisant Google comme fournisseur d'authentification.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**App.js**: vérifie si un utilisateur est connecté en utilisant le hook useAuthState, puis affiche le composant Chat s'il est connecté ou le composant SignIn s'il n'est pas connecté. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Dossier components**:
 
-### `npm test`
+- **Chat.js**: ce composant Chat gère l'affichage des messages de la conversation, permet à l'utilisateur de sélectionner un partenaire de discussion, et fournit une interface pour envoyer de nouveaux messages. Il utilise Firebase Firestore pour stocker et récupérer les messages, ainsi que Firebase Auth pour gérer l'authentification de l'utilisateur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Message.js**: ce composant affiche l'interface utilisateur d'un message dans le chat, en incluant l'avatar de l'utilisateur et le texte du message. Il utilise également des classes conditionnelles pour aligner correctement les messages en fonction de l'utilisateur qui les a envoyés.
 
-### `npm run build`
+- **SendMessage.js**: ce composant permet à l'utilisateur de saisir un message dans un champ de texte, puis d'envoyer ce message en cliquant sur un bouton. Le message est ensuite ajouté à la base de données Firestore avec des informations supplémentaires telles que l'heure de création et les détails de l'utilisateur qui l'a envoyé.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **SignIn.js**: ce composant fournit une interface utilisateur simple permettant à l'utilisateur de se connecter à l'application à l'aide de son compte Google. Lorsque l'utilisateur clique sur le bouton "Se connecter avec Google", une fenêtre contextuelle de connexion Google s'ouvre, permettant à l'utilisateur de saisir ses identifiants Google pour se connecter à l'application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**CAPTURES D'ECRAN**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+SE CONNECTER AVEC GOOGLE
+![home](https://github.com/Manuella81/chat_app/assets/101250152/3a51bd88-643d-445f-b698-89bfca2f4f95)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+INTERFACE DE CHAT
+![chat1](https://github.com/Manuella81/chat_app/assets/101250152/c3e9ff61-208e-438c-b6cd-6c0acdd16ed7)
