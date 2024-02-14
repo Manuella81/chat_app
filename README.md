@@ -1,15 +1,12 @@
-**CHAT_APP** (en cours de réalisation)
-
-Bienvenue sur le projet CHAT_APP. Il s'agit d'une application fictif de conversation.
-Utilisation de react.js en front et de firebase pour le back et cloud firestore pour la création de la base de données.
+Bienvenue sur le projet CHAT_APP. Il s'agit d'une application fictive de conversation.
+Utilisation de React.js en front et de Firebase pour le back et Cloud Firestore pour la création de la base de données.
 Firebase est utilisé pour la gestion en temps réel des messages, l'authentification des utilisateurs, le stockage de fichiers et l'analyse des données utilisateur.
-
 
 **EXPLICATION DU CODE**
 
 **firebase-config**: permet d'initialiser Firebase dans mon application web, d'accéder à Cloud Firestore pour stocker des données, et d'utiliser le service d'authentification Firebase pour gérer l'authentification des utilisateurs, en utilisant Google comme fournisseur d'authentification.
 
-**App.js**: vérifie si un utilisateur est connecté en utilisant le hook useAuthState, puis affiche le composant Chat s'il est connecté ou le composant SignIn s'il n'est pas connecté. 
+**App.js**: vérifie si un utilisateur est connecté en utilisant le hook useAuthState, puis affiche le composant Chat s'il est connecté ou le composant SignIn s'il n'est pas connecté.
 
 **Dossier components**:
 
@@ -20,8 +17,6 @@ Firebase est utilisé pour la gestion en temps réel des messages, l'authentific
 - **SendMessage.js**: ce composant permet à l'utilisateur de saisir un message dans un champ de texte, puis d'envoyer ce message en cliquant sur un bouton. Le message est ensuite ajouté à la base de données Firestore avec des informations supplémentaires telles que l'heure de création et les détails de l'utilisateur qui l'a envoyé.
 
 - **SignIn.js**: ce composant fournit une interface utilisateur simple permettant à l'utilisateur de se connecter à l'application à l'aide de son compte Google. Lorsque l'utilisateur clique sur le bouton "Se connecter avec Google", une fenêtre contextuelle de connexion Google s'ouvre, permettant à l'utilisateur de saisir ses identifiants Google pour se connecter à l'application.
-
-
 
 **CAPTURES D'ECRAN**
 
